@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Home> Component Snapshot Testing <Home> 1`] = `
+<div
+  className="container"
+>
+  <h1
+    className="text-3xl font-bold"
+  >
+    Work in progress
+  </h1>
+</div>
+`;
