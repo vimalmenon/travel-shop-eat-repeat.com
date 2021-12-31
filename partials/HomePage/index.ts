@@ -1,1 +1,1 @@
-export * from "./HomePage.widget";
+export * from './HomePage.widget';

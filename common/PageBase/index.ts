@@ -1,1 +1,1 @@
-export * from "./PageBase.widget";
+export * from './PageBase.widget';

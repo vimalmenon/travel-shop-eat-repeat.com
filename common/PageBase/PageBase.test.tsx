@@ -1,12 +1,12 @@
 import { shallow } from 'enzyme';
 import toJson from 'enzyme-to-json';
 
-import Home from '../../pages';
+import { PageBase } from './PageBase.widget';
 
-describe('<Home> Component', () => {
+describe('common > <PageBase> Component', () => {
   describe('Snapshot Testing', () => {
-    it('<Home>', () => {
-      const wrapper = shallow(<Home />);
+    it('<PageBase>', () => {
+      const wrapper = shallow(<PageBase />);
       expect(toJson(wrapper)).toMatchSnapshot();
     });
   });

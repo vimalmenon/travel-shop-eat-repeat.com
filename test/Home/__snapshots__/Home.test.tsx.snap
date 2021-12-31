@@ -4,6 +4,7 @@ exports[`<Home> Component Snapshot Testing <Home> 1`] = `
 <div
   className="container"
 >
+  <HomePage />
   <h1
     className="text-3xl font-bold"
   >
