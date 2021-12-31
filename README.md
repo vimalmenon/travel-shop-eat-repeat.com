@@ -1,1 +1,1 @@
-# travel-shop-eat-repeat.com
+# Travel Shop Eat Repeat
