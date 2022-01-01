@@ -21,6 +21,7 @@ module.exports = {
     "^@partials$": "<rootDir>/partials",
     "^@common$": "<rootDir>/common",
     "^@types$":'<rootDir>/types',
+    "^@store$":'<rootDir>/store',
     "\\.(css|less)$": "<rootDir>/__mocks__/styleMock.js",
   },
 };
