@@ -1,5 +1,10 @@
 import { configureStore } from '@reduxjs/toolkit';
 
-export const store = configureStore<Record<string, unknown>>({
-  reducer: {},
+import { appSlice } from './app/app.slice';
+import { RootState } from './store';
+
+export const store = configureStore<RootState>({
+  reducer: {
+    app: appSlice.reducer,
+  },
 });
