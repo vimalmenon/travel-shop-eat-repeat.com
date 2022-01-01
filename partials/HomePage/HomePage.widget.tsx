@@ -1,5 +1,9 @@
 import { PageBase } from '@common';
 
 export const HomePage: React.FC = () => {
-  return <PageBase>This is home Page</PageBase>;
+  return (
+    <PageBase>
+      <h1 className="text-3xl font-bold">Work in progress</h1>
+    </PageBase>
+  );
 };
