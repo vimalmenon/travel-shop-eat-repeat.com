@@ -16,11 +16,17 @@
     "incremental": true,
     "baseUrl": "./",
     "paths": {
+      "@components": [
+        "components"
+      ],
       "@partials": [
         "partials"
       ],
       "@types": [
         "types"
+      ],
+      "@store": [
+        "store"
       ],
       "@common": [
         "common"
