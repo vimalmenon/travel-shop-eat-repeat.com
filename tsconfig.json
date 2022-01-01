@@ -19,6 +19,9 @@
       "@partials": [
         "partials"
       ],
+      "@types": [
+        "types"
+      ],
       "@common": [
         "common"
       ]
