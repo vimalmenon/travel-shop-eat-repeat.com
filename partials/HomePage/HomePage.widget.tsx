@@ -1,9 +1,9 @@
-import { PageBase } from '@common';
+import { PageLayout } from '@common';
 
 export const HomePage: React.FC = () => {
   return (
-    <PageBase>
+    <PageLayout>
       <h1 className="text-3xl font-bold">Work in progress</h1>
-    </PageBase>
+    </PageLayout>
   );
 };

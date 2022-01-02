@@ -1,7 +1,7 @@
 import { Footer } from './Footer';
 import { Header } from './Header';
 
-export const PageBase: React.FC = ({ children }) => {
+export const PageLayout: React.FC = ({ children }) => {
   return (
     <>
       <Header />
