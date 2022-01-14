@@ -5,7 +5,9 @@ exports[`common > <PageLayout> Component Snapshot Testing <PageLayout> 1`] = `
   className="flex flex-col"
 >
   <Header />
-  <section />
+  <section
+    className="flex text-sm py-1 px-2"
+  />
   <Footer />
 </main>
 `;

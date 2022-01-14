@@ -1,3 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`pages > <Home> Component Snapshot Testing <Home> 1`] = `<HomePage />`;
+exports[`pages > <Home> Component Snapshot Testing <Home> 1`] = `
+<PageLayout>
+  <HomePage />
+  ;
+</PageLayout>
+`;
