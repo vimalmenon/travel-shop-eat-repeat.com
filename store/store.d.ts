@@ -1,3 +1,5 @@
+import { AppState } from './app/app';
+
 export interface RootState {
-  app: any;
+  app: AppState;
 }

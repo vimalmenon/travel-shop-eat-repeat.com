@@ -2,7 +2,7 @@
 
 exports[`common > <PageBase> <Header> <Footer> Component Snapshot Testing <Footer> 1`] = `
 <footer
-  className="flex text-sm"
+  className="flex text-sm py-1 px-2"
 >
   This is footer
 </footer>

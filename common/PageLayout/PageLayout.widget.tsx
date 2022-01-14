@@ -5,7 +5,7 @@ export const PageLayout: React.FC = ({ children }) => {
   return (
     <main className="flex flex-col">
       <Header />
-      {children}
+      <section>{children}</section>
       <Footer />
     </main>
   );

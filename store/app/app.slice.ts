@@ -1,8 +1,12 @@
 import { createSlice } from '@reduxjs/toolkit';
 
-export const appSlice = createSlice<Record<string, unknown>, any>({
+import { AppState } from './app';
+
+export const appSlice = createSlice<AppState, any>({
   name: 'app',
-  initialState: {},
+  initialState: {
+    navigation: [],
+  },
   reducers: {},
 });
 
