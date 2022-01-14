@@ -1,1 +1,1 @@
-export * from './Footer.hook';
+export * from './Footer';

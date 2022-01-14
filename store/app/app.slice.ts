@@ -6,6 +6,8 @@ export const appSlice = createSlice<AppState, any>({
   name: 'app',
   initialState: {
     navigation: [],
+    version: '',
+    mode: 'D',
   },
   reducers: {},
 });
