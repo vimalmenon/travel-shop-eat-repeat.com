@@ -1,7 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`common > <PageBase> <Header> <Footer> Component Snapshot Testing <Footer> 1`] = `
-<header>
-  This is Header
-</header>
+<footer
+  className="flex text-sm"
+>
+  This is footer
+</footer>
 `;

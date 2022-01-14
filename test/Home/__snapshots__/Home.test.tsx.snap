@@ -1,9 +1,3 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`pages > <Home> Component Snapshot Testing <Home> 1`] = `
-<div
-  className="container"
->
-  <HomePage />
-</div>
-`;
+exports[`pages > <Home> Component Snapshot Testing <Home> 1`] = `<HomePage />`;

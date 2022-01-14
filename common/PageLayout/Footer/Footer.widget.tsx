@@ -1,3 +1,3 @@
 export const Footer: React.FC = () => {
-  return <header>This is Header</header>;
+  return <footer className="flex text-sm">This is footer</footer>;
 };
