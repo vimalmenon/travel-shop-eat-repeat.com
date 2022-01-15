@@ -1,6 +1,7 @@
 import '../styles/globals.css';
 
 import { CacheProvider, EmotionCache } from '@emotion/react';
+import CssBaseline from '@mui/material/CssBaseline';
 import { ThemeProvider } from '@mui/material/styles';
 import { store } from '@store';
 import type { AppProps } from 'next/app';
@@ -25,6 +26,7 @@ const MyApp: React.FC<MyAppProps> = ({
     <CacheProvider value={emotionCache}>
       <ThemeProvider theme={theme}>
         <Provider store={store}>
+          <CssBaseline />
           <Component {...pageProps} />
         </Provider>
       </ThemeProvider>
