@@ -1,5 +1,6 @@
 import { RootState } from '@store';
 import { IMetaData } from '@types';
+import Link from 'next/link';
 import { useSelector } from 'react-redux';
 
 export const Header: React.FC = () => {
@@ -10,7 +11,11 @@ export const Header: React.FC = () => {
   return (
     <header className="flex text-sm py-1 px-2">
       {navigation.map((nav, key) => {
-        return <span key={key}>{nav.name}</span>;
+        return (
+          <Link href={nav.url} key={key}>
+            <a>{nav.name}</a>
+          </Link>
+        );
       })}
     </header>
   );

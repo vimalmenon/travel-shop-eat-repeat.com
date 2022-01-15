@@ -11,7 +11,11 @@ const Contact: NextPage<IPage> = ({ navigation, config: appConfig, navigationLis
   const metaDataMap = useSelector<RootState, Record<string, IMetaData>>(
     (state) => state.app.metaDataMap
   );
-  return <PageLayout metaData={metaDataMap['Contact']}>This is Contact</PageLayout>;
+  return (
+    <PageLayout metaData={metaDataMap['Contact']}>
+      <h1 className="text-3xl font-bold">This is Contact</h1>
+    </PageLayout>
+  );
 };
 
 Contact.getInitialProps = () => {
