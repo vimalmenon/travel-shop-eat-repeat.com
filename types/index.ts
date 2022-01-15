@@ -14,3 +14,7 @@ export interface IConfig {
   mode: 'D' | 'A' | 'B';
   titleSeparator: string;
 }
+
+export interface IPage {
+  navigation: INavigation[];
+}

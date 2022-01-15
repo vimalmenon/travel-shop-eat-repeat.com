@@ -1,9 +1,17 @@
+import { PageLayout } from '@common';
+import { IPage } from '@types';
 import type { NextPage } from 'next';
 
-import styles from '../styles/Page.module.css';
+import { Navigation } from '../data';
 
-const Contact: NextPage = () => {
-  return <div className={styles.container}>This is Contact</div>;
+const Contact: NextPage<IPage> = () => {
+  return <PageLayout>This is Contact</PageLayout>;
+};
+
+Contact.getInitialProps = () => {
+  return {
+    navigation: Navigation,
+  };
 };
 
 export default Contact;

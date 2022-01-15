@@ -1,8 +1,13 @@
 import { PageLayout } from '@common';
 import { HomePage } from '@partials';
+import { usePageHelper } from '@store';
+import { IPage } from '@types';
 import type { NextPage } from 'next';
 
-const Home: NextPage = () => {
+import { Navigation } from '../data';
+
+const Home: NextPage<IPage> = ({ navigation }) => {
+  usePageHelper(navigation);
   return (
     <PageLayout>
       <HomePage />
@@ -10,4 +15,9 @@ const Home: NextPage = () => {
   );
 };
 
+Home.getInitialProps = () => {
+  return {
+    navigation: Navigation,
+  };
+};
 export default Home;

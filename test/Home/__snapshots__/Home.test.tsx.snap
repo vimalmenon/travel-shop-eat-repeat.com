@@ -3,6 +3,5 @@
 exports[`pages > <Home> Component Snapshot Testing <Home> 1`] = `
 <PageLayout>
   <HomePage />
-  ;
 </PageLayout>
 `;

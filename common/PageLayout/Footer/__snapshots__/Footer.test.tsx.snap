@@ -2,11 +2,9 @@
 
 exports[`common > <PageBase> <Header> <Footer> Component Snapshot Testing <Footer> 1`] = `
 <footer
-  className="flex text-sm py-1 px-2 justify-between"
+  className="flex text-sm py-1 px-2 justify-between h-12 items-center"
 >
-  <span>
-    This is footer
-  </span>
+  <span />
   <span>
     0.0.0-D
   </span>
