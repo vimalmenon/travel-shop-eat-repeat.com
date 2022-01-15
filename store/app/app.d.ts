@@ -5,7 +5,8 @@ export interface AppState {
   appName: string;
   appDescription: string;
   navigation: INavigationApi[];
-  navigationMap: Record<string, IMetaData>;
+  metaDataMap: Record<string, IMetaData>;
+  navigationList: Record<string, INavigationApi>;
   version: string;
   mode: 'D' | 'A' | 'B';
   titleSeparator: string;
@@ -14,5 +15,6 @@ export interface AppState {
 export type SliceAction = {
   setNavigation: (v: AppState, a: PayloadAction<INavigationApi[]>) => void;
   setConfig: (v: AppState, a: PayloadAction<IConfig>) => void;
-  setNavigationMap: (v: AppState, a: PayloadAction<Record<string, IMetaData>>) => void;
+  setMetaDataMap: (v: AppState, a: PayloadAction<Record<string, IMetaData>>) => void;
+  setNavigationList: (v: AppState, a: PayloadAction<Record<string, INavigationApi>>) => void;
 };

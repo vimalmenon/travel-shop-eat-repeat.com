@@ -8,10 +8,10 @@ import { config, Navigation } from '../data';
 
 const Contact: NextPage<IPage> = ({ navigation, config: appConfig }) => {
   usePageHelper(navigation, appConfig);
-  const navigationItem = useSelector<RootState, Record<string, IMetaData>>(
-    (state) => state.app.navigationMap
+  const metaDataMap = useSelector<RootState, Record<string, IMetaData>>(
+    (state) => state.app.metaDataMap
   );
-  return <PageLayout metaData={navigationItem['Contact']}>This is Contact</PageLayout>;
+  return <PageLayout metaData={metaDataMap['Contact']}>This is Contact</PageLayout>;
 };
 
 Contact.getInitialProps = () => {

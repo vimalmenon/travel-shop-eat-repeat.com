@@ -11,7 +11,8 @@ export const appSlice = createSlice<AppState, SliceAction>({
     titleSeparator: '|',
     appName: 'Application',
     appDescription: 'Application Description',
-    navigationMap: {},
+    metaDataMap: {},
+    navigationList: {},
   },
   reducers: {
     setNavigation(root, action) {
@@ -27,8 +28,11 @@ export const appSlice = createSlice<AppState, SliceAction>({
       root.appDescription = appDescription;
       root.appName = appName;
     },
-    setNavigationMap(root, action) {
-      root.navigationMap = action.payload;
+    setMetaDataMap(root, action) {
+      root.metaDataMap = action.payload;
+    },
+    setNavigationList(root, action) {
+      root.navigationList = action.payload;
     },
   },
 });

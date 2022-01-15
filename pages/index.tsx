@@ -9,11 +9,11 @@ import { config, Navigation } from '../data';
 
 const Home: NextPage<IPage> = ({ navigation, config: appConfig }) => {
   usePageHelper(navigation, appConfig);
-  const navigationItem = useSelector<RootState, Record<string, IMetaData>>(
-    (state) => state.app.navigationMap
+  const metaDataMap = useSelector<RootState, Record<string, IMetaData>>(
+    (state) => state.app.metaDataMap
   );
   return (
-    <PageLayout metaData={navigationItem['Home']}>
+    <PageLayout metaData={metaDataMap['Home']}>
       <HomePage />
     </PageLayout>
   );

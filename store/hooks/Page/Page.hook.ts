@@ -15,7 +15,7 @@ export const usePageHelper: UsePageHelperType = (navigation, config) => {
     dispatch(appActions.setNavigation(navigation));
     dispatch(appActions.setConfig(config));
     dispatch(
-      appActions.setNavigationMap(
+      appActions.setMetaDataMap(
         getNavigationMap(navigation, appName, appDescription, titleSeparator)
       )
     );

@@ -32,5 +32,10 @@ export const Navigation: INavigationApi[] = [
   ContactNavigation,
 ];
 
-export const MainNavigation: string[] = ['HomeNavigation', 'ContactNavigation'];
-export const FooterNavigation: string[] = ['HomeNavigation'];
+export const MainNavigation: string[] = ['Home', 'Contact'];
+export const FooterNavigation: string[] = ['Home', 'Contact'];
+
+export const NavigationList: Record<string, string[]> = {
+  MainNavigation,
+  FooterNavigation,
+};
