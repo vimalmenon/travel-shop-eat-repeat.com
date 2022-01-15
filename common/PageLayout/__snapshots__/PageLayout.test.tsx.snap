@@ -1,13 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`common > <PageLayout> Component Snapshot Testing <PageLayout> 1`] = `
-<main
-  className="flex flex-col"
->
+<main>
   <Header />
-  <section
-    className="flex text-sm py-1 px-2"
-  />
+  <MetaData />
+  <section />
   <Footer />
 </main>
 `;

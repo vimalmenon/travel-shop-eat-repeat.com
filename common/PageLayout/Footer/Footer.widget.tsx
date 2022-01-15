@@ -10,7 +10,7 @@ export const Footer: React.FC = () => {
   );
   const navigation = data['FooterNavigation'] || [];
   return (
-    <footer className="flex text-sm py-1 px-2 justify-between h-12 items-center">
+    <footer>
       <span>
         {navigation.map((nav, key) => {
           return (

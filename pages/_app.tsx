@@ -1,11 +1,13 @@
 import '../styles/globals.css';
 
 import { CacheProvider, EmotionCache } from '@emotion/react';
+import { ThemeProvider } from '@mui/material/styles';
 import { store } from '@store';
 import type { AppProps } from 'next/app';
 import { Provider } from 'react-redux';
 
 import createEmotionCache from '../config/createEmotionCache';
+import theme from '../config/theme';
 
 // Client-side cache, shared for the whole session of the user in the browser.
 const clientSideEmotionCache = createEmotionCache();
@@ -21,9 +23,11 @@ const MyApp: React.FC<MyAppProps> = ({
 }) => {
   return (
     <CacheProvider value={emotionCache}>
-      <Provider store={store}>
-        <Component {...pageProps} />
-      </Provider>
+      <ThemeProvider theme={theme}>
+        <Provider store={store}>
+          <Component {...pageProps} />
+        </Provider>
+      </ThemeProvider>
     </CacheProvider>
   );
 };

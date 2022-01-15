@@ -6,19 +6,19 @@ import { useSelector } from 'react-redux';
 
 import { config, Navigation, NavigationList } from '../data';
 
-const Contact: NextPage<IPage> = ({ navigation, config: appConfig, navigationList }) => {
+const PrivacyPolicy: NextPage<IPage> = ({ navigation, config: appConfig, navigationList }) => {
   usePageHelper(navigation, appConfig, navigationList);
   const metaDataMap = useSelector<RootState, Record<string, IMetaData>>(
     (state) => state.app.metaDataMap
   );
   return (
     <PageLayout metaData={metaDataMap['Contact']}>
-      <h1>This is Contact</h1>
+      <h1>This is Privacy Policy</h1>
     </PageLayout>
   );
 };
 
-Contact.getInitialProps = () => {
+PrivacyPolicy.getInitialProps = () => {
   return {
     navigation: Navigation,
     navigationList: NavigationList,
@@ -27,4 +27,4 @@ Contact.getInitialProps = () => {
   };
 };
 
-export default Contact;
+export default PrivacyPolicy;

@@ -9,7 +9,7 @@ export const Header: React.FC = () => {
   );
   const navigation = data['MainNavigation'] || [];
   return (
-    <header className="flex text-sm py-1 px-2">
+    <header>
       {navigation.map((nav, key) => {
         return (
           <Link href={nav.url} key={key}>

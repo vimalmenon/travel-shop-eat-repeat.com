@@ -1,9 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`common > <PageBase> <Header> Component Snapshot Testing <Header> 1`] = `
-<header
-  className="flex text-sm py-1 px-2"
->
-  This is Header
-</header>
-`;

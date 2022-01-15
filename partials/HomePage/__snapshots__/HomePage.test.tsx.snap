@@ -1,9 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`partials > <HomePage> Component Snapshot Testing <HomePage> 1`] = `
-<h1
-  className="text-3xl font-bold"
->
-  Work in progress
+<h1>
+  This is Home Page
 </h1>
 `;

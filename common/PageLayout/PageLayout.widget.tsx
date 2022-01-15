@@ -6,10 +6,10 @@ import { IPageLayout } from './PageLayout';
 
 export const PageLayout: React.FC<IPageLayout> = ({ children, metaData }) => {
   return (
-    <main className="flex flex-col">
+    <main>
       <Header />
       <MetaData metaData={metaData} />
-      <section className="flex text-sm py-1 px-2">{children}</section>
+      <section>{children}</section>
       <Footer />
     </main>
   );
