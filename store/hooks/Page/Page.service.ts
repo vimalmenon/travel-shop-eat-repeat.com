@@ -1,6 +1,11 @@
 import { GetNavigationMapType, NavigationMapType } from './Page';
 
-export const getNavigationMap: GetNavigationMapType = (navigation, appName, appDescription) => {
+export const getNavigationMap: GetNavigationMapType = (
+  navigation,
+  appName,
+  appDescription,
+  titleSeparator
+) => {
   const navigationMap: NavigationMapType = {};
 
   navigation.forEach((nav) => {
@@ -9,6 +14,7 @@ export const getNavigationMap: GetNavigationMapType = (navigation, appName, appD
       name: nav.name,
       titles,
       description: nav.description || appDescription,
+      titleSeparator,
     };
   });
   return navigationMap;

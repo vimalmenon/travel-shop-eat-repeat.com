@@ -1,15 +1,19 @@
 import { PageLayout } from '@common';
 import { HomePage } from '@partials';
-import { usePageHelper } from '@store';
-import { IPage } from '@types';
+import { RootState, usePageHelper } from '@store';
+import { IMetaData, IPage } from '@types';
 import type { NextPage } from 'next';
+import { useSelector } from 'react-redux';
 
 import { config, Navigation } from '../data';
 
 const Home: NextPage<IPage> = ({ navigation, config: appConfig }) => {
   usePageHelper(navigation, appConfig);
+  const navigationItem = useSelector<RootState, Record<string, IMetaData>>(
+    (state) => state.app.navigationMap
+  );
   return (
-    <PageLayout>
+    <PageLayout metaData={navigationItem['Home']}>
       <HomePage />
     </PageLayout>
   );

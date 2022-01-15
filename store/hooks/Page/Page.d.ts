@@ -5,5 +5,6 @@ export type UsePageHelperType = (navigation: INavigationApi[], config: IConfig) 
 export type GetNavigationMapType = (
   navigation: INavigationApi[],
   appName: string,
-  appDescription: string
+  appDescription: string,
+  titleSeparator: string
 ) => NavigationMapType;

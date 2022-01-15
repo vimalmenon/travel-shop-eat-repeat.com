@@ -2,7 +2,7 @@ import { INavigationApi } from '@types';
 
 const PageNotFoundNavigation: INavigationApi = {
   id: -1,
-  name: 'Page Not Found',
+  name: 'PageNotFound',
   label: 'PageNotFoundNavigation',
   url: '*',
   title: 'Page Not Found',

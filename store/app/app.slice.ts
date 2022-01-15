@@ -27,6 +27,9 @@ export const appSlice = createSlice<AppState, SliceAction>({
       root.version = version;
       root.mode = mode;
     },
+    setNavigationMap(root, action) {
+      root.navigationMap = action.payload;
+    },
   },
 });
 

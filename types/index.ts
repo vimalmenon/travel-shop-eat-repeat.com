@@ -12,6 +12,7 @@ export interface IMetaData {
   name: string;
   titles: string[];
   description: string;
+  titleSeparator: string;
 }
 
 export interface IConfig {

@@ -1,5 +1,5 @@
 import { IMetaData } from '@types';
 
-export interface IMetaData {
+export interface IPageLayout {
   metaData?: IMetaData;
 }
