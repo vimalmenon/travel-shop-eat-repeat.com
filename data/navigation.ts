@@ -1,6 +1,6 @@
-import { INavigation } from '@types';
+import { INavigationApi } from '@types';
 
-const PageNotFoundNavigation: INavigation = {
+const PageNotFoundNavigation: INavigationApi = {
   id: -1,
   name: 'Page Not Found',
   label: 'PageNotFoundNavigation',
@@ -9,23 +9,24 @@ const PageNotFoundNavigation: INavigation = {
   description: 'Page was not found',
 };
 
-const HomeNavigation: INavigation = {
+const HomeNavigation: INavigationApi = {
   id: 0,
   name: 'Home',
   label: 'HomeNavigation',
   url: '/',
 };
 
-const ContactNavigation: INavigation = {
+const ContactNavigation: INavigationApi = {
   id: 1,
   name: 'Contact',
   label: 'ContactNavigation',
   url: '/contact',
   title: 'Contact',
   description: 'Contact',
+  parentNavigation: 0,
 };
 
-export const Navigation: INavigation[] = [
+export const Navigation: INavigationApi[] = [
   HomeNavigation,
   PageNotFoundNavigation,
   ContactNavigation,

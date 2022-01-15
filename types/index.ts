@@ -1,10 +1,17 @@
-export interface INavigation {
+export interface INavigationApi {
   id: number;
   name: string;
   label: string;
   url: string;
   title?: string;
   description?: string;
+  parentNavigation?: number;
+}
+
+export interface IMetaData {
+  name: string;
+  titles: string[];
+  description: string;
 }
 
 export interface IConfig {
@@ -16,5 +23,6 @@ export interface IConfig {
 }
 
 export interface IPage {
-  navigation: INavigation[];
+  navigation: INavigationApi[];
+  config: IConfig;
 }

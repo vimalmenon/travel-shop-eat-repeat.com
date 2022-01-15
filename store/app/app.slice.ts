@@ -11,10 +11,21 @@ export const appSlice = createSlice<AppState, SliceAction>({
     titleSeparator: '|',
     appName: 'Application',
     appDescription: 'Application Description',
+    navigationMap: {},
   },
   reducers: {
     setNavigation(root, action) {
       root.navigation = action.payload;
+    },
+    setConfig(root, action) {
+      const { appDescription, appName, mode, titleSeparator, version } = action.payload;
+
+      root.appName = appName;
+      root.appDescription = appDescription;
+
+      root.titleSeparator = titleSeparator;
+      root.version = version;
+      root.mode = mode;
     },
   },
 });
