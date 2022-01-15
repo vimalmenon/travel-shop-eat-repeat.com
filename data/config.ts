@@ -5,5 +5,5 @@ export const config: IConfig = {
   appDescription: 'This is shopping Application page',
   version: '0.0.0',
   mode: 'D',
-  titleSeparator: '|',
+  titleSeparator: ' | ',
 };

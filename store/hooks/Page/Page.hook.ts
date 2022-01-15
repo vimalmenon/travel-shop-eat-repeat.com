@@ -19,5 +19,5 @@ export const usePageHelper: UsePageHelperType = (navigation, config) => {
         getNavigationMap(navigation, appName, appDescription, titleSeparator)
       )
     );
-  }, []);
+  }, [appName, appDescription, titleSeparator]);
 };

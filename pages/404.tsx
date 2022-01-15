@@ -6,19 +6,19 @@ import { useSelector } from 'react-redux';
 
 import { config, Navigation } from '../data';
 
-const Contact: NextPage<IPage> = ({ navigation, config: appConfig }) => {
+const PageNotFound: NextPage<IPage> = ({ navigation, config: appConfig }) => {
   usePageHelper(navigation, appConfig);
   const navigationItem = useSelector<RootState, Record<string, IMetaData>>(
     (state) => state.app.navigationMap
   );
-  return <PageLayout metaData={navigationItem['Contact']}>This is Contact</PageLayout>;
+  return <PageLayout metaData={navigationItem['PageNotFound']}>This is Contact</PageLayout>;
 };
 
-Contact.getInitialProps = () => {
+PageNotFound.getInitialProps = () => {
   return {
     navigation: Navigation,
     config,
   };
 };
 
-export default Contact;
+export default PageNotFound;

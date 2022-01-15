@@ -20,12 +20,12 @@ export const appSlice = createSlice<AppState, SliceAction>({
     setConfig(root, action) {
       const { appDescription, appName, mode, titleSeparator, version } = action.payload;
 
-      root.appName = appName;
-      root.appDescription = appDescription;
-
       root.titleSeparator = titleSeparator;
       root.version = version;
       root.mode = mode;
+
+      root.appDescription = appDescription;
+      root.appName = appName;
     },
     setNavigationMap(root, action) {
       root.navigationMap = action.payload;
