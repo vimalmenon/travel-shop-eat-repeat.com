@@ -16,6 +16,7 @@ describe('pages > <Home> Component', () => {
             version: '0.0.0',
             mode: 'D',
           }}
+          navigationList={{}}
         />
       );
       expect(toJson(wrapper)).toMatchSnapshot();

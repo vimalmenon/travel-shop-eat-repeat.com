@@ -13,6 +13,8 @@ export interface IMetaData {
   titles: string[];
   description: string;
   titleSeparator: string;
+  url: string;
+  label: string;
 }
 
 export interface IConfig {
@@ -26,4 +28,5 @@ export interface IConfig {
 export interface IPage {
   navigation: INavigationApi[];
   config: IConfig;
+  navigationList: Record<string, string[]>;
 }

@@ -4,10 +4,10 @@ import { IMetaData, IPage } from '@types';
 import type { NextPage } from 'next';
 import { useSelector } from 'react-redux';
 
-import { config, Navigation } from '../data';
+import { config, Navigation, NavigationList } from '../data';
 
-const PageNotFound: NextPage<IPage> = ({ navigation, config: appConfig }) => {
-  usePageHelper(navigation, appConfig);
+const PageNotFound: NextPage<IPage> = ({ navigation, config: appConfig, navigationList }) => {
+  usePageHelper(navigation, appConfig, navigationList);
   const metaDataMap = useSelector<RootState, Record<string, IMetaData>>(
     (state) => state.app.metaDataMap
   );
@@ -17,6 +17,7 @@ const PageNotFound: NextPage<IPage> = ({ navigation, config: appConfig }) => {
 PageNotFound.getInitialProps = () => {
   return {
     navigation: Navigation,
+    navigationList: NavigationList,
     config,
   };
 };
