@@ -1,4 +1,5 @@
 import { PageLayout } from '@common';
+import { StorePartial } from '@partials';
 import { RootState, usePageHelper } from '@store';
 import { IMetaData, IPage } from '@types';
 import type { NextPage } from 'next';
@@ -13,7 +14,7 @@ const Shop: NextPage<IPage> = ({ navigation, config: appConfig, navigationList }
   );
   return (
     <PageLayout metaData={metaDataMap['Store']}>
-      <h1>This is Shopping page</h1>
+      <StorePartial />
     </PageLayout>
   );
 };

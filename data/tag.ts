@@ -1,28 +1,35 @@
 import { ITag } from '@types';
 
+import { JewelryCategory } from './category';
+
 export const EaringTag: ITag = {
-  name: 'Earning',
+  name: 'earning',
   value: 'Earning',
+  category: JewelryCategory,
 };
 
 export const ChainTag: ITag = {
-  name: 'Chain',
+  name: 'chain',
   value: 'Chain',
+  category: JewelryCategory,
 };
 
 export const RingTag: ITag = {
-  name: 'Ring',
+  name: 'ring',
   value: 'Ring',
+  category: JewelryCategory,
 };
 
 export const BraceletTag: ITag = {
-  name: 'Bracelet',
+  name: 'bracelet',
   value: 'Bracelet',
+  category: JewelryCategory,
 };
 
 export const BangleTag: ITag = {
-  name: 'Bangle',
+  name: 'bangle',
   value: 'Bangle',
+  category: JewelryCategory,
 };
 
 export const tags: ITag[] = [EaringTag, ChainTag, RingTag, BraceletTag, BangleTag];

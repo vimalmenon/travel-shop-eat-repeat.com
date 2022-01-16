@@ -39,14 +39,16 @@ export interface ICategory {
 export interface ITag {
   name: string;
   value: string;
+  category: ICategory;
 }
 
-export interface IJewelryItem {
+export interface IItem {
   name: string;
+  label: string;
   description: string;
   title: string;
-  price: string;
+  price: number;
   tags: ITag[];
   images: string[];
-  category: ICategory;
+  likes: number;
 }
