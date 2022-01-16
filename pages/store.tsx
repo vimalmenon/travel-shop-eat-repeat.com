@@ -12,7 +12,7 @@ const Shop: NextPage<IPage> = ({ navigation, config: appConfig, navigationList }
     (state) => state.app.metaDataMap
   );
   return (
-    <PageLayout metaData={metaDataMap['Contact']}>
+    <PageLayout metaData={metaDataMap['Store']}>
       <h1>This is Shopping page</h1>
     </PageLayout>
   );
