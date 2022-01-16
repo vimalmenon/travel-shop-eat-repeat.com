@@ -1,2 +1,19 @@
 Inspiration page
 https://material-ui.com/store/previews/webbee-landing-page/
+
+
+Idea:
+    Jewellery
+        Earings
+        Chains,
+        Bracelets / Bangles
+        Rings
+        Tow Rings
+        Jewellery Box
+
+
+    Gifts:
+
+    Decorative:
+
+    Beauty Products?:

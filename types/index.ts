@@ -30,3 +30,23 @@ export interface IPage {
   config: IConfig;
   navigationList: Record<string, string[]>;
 }
+
+export interface ICategory {
+  name: string;
+  value: string;
+}
+
+export interface ITag {
+  name: string;
+  value: string;
+}
+
+export interface IJewelryItem {
+  name: string;
+  description: string;
+  title: string;
+  price: string;
+  tags: ITag[];
+  images: string[];
+  category: ICategory;
+}
