@@ -1,4 +1,5 @@
 import { Container, MetaData } from '@common';
+import MiContainer from '@mui/material/Container';
 
 import { Footer } from './Footer';
 import { Header } from './Header';
@@ -10,7 +11,7 @@ export const PageLayout: React.FC<IPageLayout> = ({ children, metaData }) => {
       <Header />
       <MetaData metaData={metaData} />
       <Container component="section" flex="1" flexDirection="column">
-        {children}
+        <MiContainer maxWidth="xl">{children}</MiContainer>
       </Container>
       <Footer />
     </Container>
