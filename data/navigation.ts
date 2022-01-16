@@ -16,13 +16,13 @@ const HomeNavigation: INavigationApi = {
   url: '/',
 };
 
-const StopNavigation: INavigationApi = {
+const StoreNavigation: INavigationApi = {
   id: 2,
-  name: 'Shop',
-  label: 'Shop',
-  url: '/shop',
-  title: 'Shop',
-  description: 'This is shopping page',
+  name: 'Store',
+  label: 'Store',
+  url: '/store',
+  title: 'Store',
+  description: 'This is Store page',
   parentNavigation: 0,
 };
 
@@ -51,10 +51,10 @@ export const Navigation: INavigationApi[] = [
   PageNotFoundNavigation,
   ContactNavigation,
   PrivacyPolicyNavigation,
-  StopNavigation,
+  StoreNavigation,
 ];
 
-export const MainNavigation: string[] = ['Home', 'Shop', 'Contact'];
+export const MainNavigation: string[] = ['Home', 'Store', 'Contact'];
 export const FooterNavigation: string[] = ['Home', 'Contact', 'PrivacyPolicy'];
 
 export const NavigationList: Record<string, string[]> = {
