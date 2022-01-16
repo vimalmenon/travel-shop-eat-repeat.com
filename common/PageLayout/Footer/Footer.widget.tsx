@@ -5,6 +5,8 @@ import { IMetaData } from '@types';
 import Link from 'next/link';
 import { useSelector } from 'react-redux';
 
+import { LowerFooter } from './LowerFooter';
+
 export const Footer: React.FC = () => {
   const { versionNumber, appName } = useFooterHelper();
   const data = useSelector<RootState, Record<string, IMetaData[]>>(
@@ -12,7 +14,7 @@ export const Footer: React.FC = () => {
   );
   const navigation = data['FooterNavigation'] || [];
   return (
-    <Container component="footer" flex="1" flexDirection="column" padding={[1]}>
+    <Container component="footer" flex="1" flexDirection="column">
       <div>
         <span>
           {navigation.map((nav, key) => {
@@ -26,10 +28,7 @@ export const Footer: React.FC = () => {
           })}
         </span>
       </div>
-      <div>
-        <span>&copy; {appName}, 2021. All rights reserved</span>
-        <span>{versionNumber}</span>
-      </div>
+      <LowerFooter appName={appName} versionNumber={versionNumber} />
     </Container>
   );
 };
