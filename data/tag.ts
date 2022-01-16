@@ -32,4 +32,4 @@ export const BangleTag: ITag = {
   category: JewelryCategory,
 };
 
-export const tags: ITag[] = [EaringTag, ChainTag, RingTag, BraceletTag, BangleTag];
+export const Tags: ITag[] = [EaringTag, ChainTag, RingTag, BraceletTag, BangleTag];

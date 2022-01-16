@@ -31,6 +31,11 @@ export interface IPage {
   navigationList: Record<string, string[]>;
 }
 
+export interface IStorePage {
+  categories: ICategory[];
+  tags: ITag[];
+}
+
 export interface ICategory {
   name: string;
   value: string;

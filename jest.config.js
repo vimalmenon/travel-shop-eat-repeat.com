@@ -22,6 +22,7 @@ module.exports = {
     "^@common$": "<rootDir>/common",
     "^@types$":'<rootDir>/types',
     "^@store$":'<rootDir>/store',
+    "^@data$":'<rootDir>/data',
     "\\.(css|less)$": "<rootDir>/__mocks__/styleMock.js",
   },
 };

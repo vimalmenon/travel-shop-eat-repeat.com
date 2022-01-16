@@ -18,8 +18,10 @@ export const ItemTwo: IItem = {
   label: 'Item Two',
   description: 'This is item two',
   title: 'Item Two',
-  price: 15,
+  price: 55,
   tags: [EaringTag],
   images: [],
   likes: 0,
 };
+
+export const items = [ItemOne, ItemTwo];

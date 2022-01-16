@@ -1,20 +1,25 @@
 import { PageLayout } from '@common';
+import { Categories, config, Navigation, NavigationList, Tags } from '@data';
 import { StorePartial } from '@partials';
 import { RootState, usePageHelper } from '@store';
-import { IMetaData, IPage } from '@types';
+import { IMetaData, IPage, IStorePage } from '@types';
 import type { NextPage } from 'next';
 import { useSelector } from 'react-redux';
 
-import { config, Navigation, NavigationList } from '../data';
-
-const Shop: NextPage<IPage> = ({ navigation, config: appConfig, navigationList }) => {
+const Shop: NextPage<IPage & IStorePage> = ({
+  navigation,
+  config: appConfig,
+  navigationList,
+  categories,
+  tags,
+}) => {
   usePageHelper(navigation, appConfig, navigationList);
   const metaDataMap = useSelector<RootState, Record<string, IMetaData>>(
     (state) => state.app.metaDataMap
   );
   return (
     <PageLayout metaData={metaDataMap['Store']}>
-      <StorePartial />
+      <StorePartial categories={categories} tags={tags} />
     </PageLayout>
   );
 };
@@ -23,7 +28,8 @@ Shop.getInitialProps = () => {
   return {
     navigation: Navigation,
     navigationList: NavigationList,
-
+    categories: Categories,
+    tags: Tags,
     config,
   };
 };

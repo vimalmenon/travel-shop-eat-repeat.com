@@ -3,17 +3,16 @@ https://material-ui.com/store/previews/webbee-landing-page/
 
 
 Idea:
-    Jewellery
+    jewelry
         Earings
         Chains,
         Bracelets / Bangles
         Rings
-        Tow Rings
-        Jewellery Box
-
+        jewelry Box
 
     Gifts:
-
     Decorative:
-
     Beauty Products?:
+
+
+Store -> [jewelry [Tag]] -> Item
