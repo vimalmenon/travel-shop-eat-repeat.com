@@ -1,10 +1,23 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`common > <PageLayout> Component Snapshot Testing <PageLayout> 1`] = `
-<main>
+<Container
+  component="main"
+  flex="1"
+  flexDirection="column"
+  padding={
+    Array [
+      1,
+    ]
+  }
+>
   <Header />
   <MetaData />
-  <section />
+  <Container
+    component="section"
+    flex="1"
+    flexDirection="column"
+  />
   <Footer />
-</main>
+</Container>
 `;

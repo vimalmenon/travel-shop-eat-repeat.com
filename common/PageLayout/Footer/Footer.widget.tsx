@@ -1,3 +1,5 @@
+import { Container } from '@common';
+import Button from '@mui/material/Button';
 import { RootState, useFooterHelper } from '@store';
 import { IMetaData } from '@types';
 import Link from 'next/link';
@@ -10,13 +12,15 @@ export const Footer: React.FC = () => {
   );
   const navigation = data['FooterNavigation'] || [];
   return (
-    <footer>
+    <Container component="footer" flex="1" flexDirection="column" padding={[1]}>
       <div>
         <span>
           {navigation.map((nav, key) => {
             return (
               <Link href={nav.url} key={key}>
-                <a>{nav.name}</a>
+                <Button variant="text">
+                  <a>{nav.label}</a>
+                </Button>
               </Link>
             );
           })}
@@ -26,6 +30,6 @@ export const Footer: React.FC = () => {
         <span>&copy; {appName}, 2021. All rights reserved</span>
         <span>{versionNumber}</span>
       </div>
-    </footer>
+    </Container>
   );
 };

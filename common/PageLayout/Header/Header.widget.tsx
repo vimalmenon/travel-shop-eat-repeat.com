@@ -1,3 +1,4 @@
+import Button from '@mui/material/Button';
 import { RootState } from '@store';
 import { IMetaData } from '@types';
 import Link from 'next/link';
@@ -13,7 +14,9 @@ export const Header: React.FC = () => {
       {navigation.map((nav, key) => {
         return (
           <Link href={nav.url} key={key}>
-            <a>{nav.name}</a>
+            <Button variant="text">
+              <a>{nav.label}</a>
+            </Button>
           </Link>
         );
       })}

@@ -3,7 +3,7 @@ import { INavigationApi } from '@types';
 const PageNotFoundNavigation: INavigationApi = {
   id: -1,
   name: 'PageNotFound',
-  label: 'PageNotFoundNavigation',
+  label: 'Page Not Found',
   url: '*',
   title: 'Page Not Found',
   description: 'Page was not found',
@@ -12,14 +12,14 @@ const PageNotFoundNavigation: INavigationApi = {
 const HomeNavigation: INavigationApi = {
   id: 0,
   name: 'Home',
-  label: 'HomeNavigation',
+  label: 'Home',
   url: '/',
 };
 
 const ContactNavigation: INavigationApi = {
   id: 1,
   name: 'Contact',
-  label: 'ContactNavigation',
+  label: 'Contact',
   url: '/contact',
   title: 'Contact',
   description: 'Contact',
