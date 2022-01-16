@@ -5,7 +5,7 @@ import { ILowerFooter } from './LowerFooter';
 
 export const LowerFooter: React.FC<ILowerFooter> = ({ appName, versionNumber }) => {
   return (
-    <Container component="section" flex="1" fontSize="0.8em">
+    <Container component="section" flex="1" fontSize="0.8em" padding={[1, 0]}>
       <MiContainer maxWidth="xl">
         <Container flex="1">
           <Container flex="1 1 auto">

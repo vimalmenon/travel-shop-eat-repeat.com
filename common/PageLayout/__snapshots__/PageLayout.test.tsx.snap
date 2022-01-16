@@ -5,11 +5,6 @@ exports[`common > <PageLayout> Component Snapshot Testing <PageLayout> 1`] = `
   component="main"
   flex="1"
   flexDirection="column"
-  padding={
-    Array [
-      1,
-    ]
-  }
 >
   <Header />
   <MetaData />
