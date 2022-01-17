@@ -10,8 +10,8 @@ export const StorePartial: React.FC<IStorePartial> = ({ categories, tags }) => {
         <h1>What is in store for us</h1>
       </Container>
       <Container>
-        <SidePanel />
-        <div>
+        <SidePanel categories={categories} tags={tags} />
+        <Container component="section">
           {categories.map((category, key) => {
             return (
               <Container key={key} flexDirection="column">
@@ -32,7 +32,7 @@ export const StorePartial: React.FC<IStorePartial> = ({ categories, tags }) => {
               </Container>
             );
           })}
-        </div>
+        </Container>
       </Container>
     </Container>
   );

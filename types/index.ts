@@ -50,6 +50,7 @@ export interface IItem {
   tags: ITag[];
   images: string[];
   likes: number;
+  clicks: number;
 }
 
 export interface IPageProps {

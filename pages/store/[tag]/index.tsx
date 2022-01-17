@@ -26,12 +26,25 @@ const Tag: NextPage<IPageProps & IStorePage> = ({
   );
 };
 
-Tag.getInitialProps = () => {
+export async function getStaticPaths() {
   return {
-    ...ProcessForPageLayout(Navigation, config, NavigationList),
-    categories: Categories,
-    tags: Tags,
+    paths: [
+      { params: { tag: 'earning' } },
+      { params: { tag: 'chain' } },
+      { params: { tag: 'ring' } },
+      { params: { tag: 'bracelet' } },
+    ],
+    fallback: false,
   };
-};
+}
 
+export async function getStaticProps() {
+  return {
+    props: {
+      ...ProcessForPageLayout(Navigation, config, NavigationList),
+      categories: Categories,
+      tags: Tags,
+    },
+  };
+}
 export default Tag;

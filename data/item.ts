@@ -11,6 +11,7 @@ export const ItemOne: IItem = {
   tags: [EaringTag],
   images: [],
   likes: 0,
+  clicks: 0,
 };
 
 export const ItemTwo: IItem = {
@@ -22,6 +23,7 @@ export const ItemTwo: IItem = {
   tags: [EaringTag],
   images: [],
   likes: 0,
+  clicks: 0,
 };
 
 export const items = [ItemOne, ItemTwo];
