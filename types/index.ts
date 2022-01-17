@@ -25,12 +25,6 @@ export interface IConfig {
   titleSeparator: string;
 }
 
-export interface IPage {
-  navigation: INavigationApi[];
-  config: IConfig;
-  navigationList: Record<string, string[]>;
-}
-
 export interface IStorePage {
   categories: ICategory[];
   tags: ITag[];
@@ -58,11 +52,11 @@ export interface IItem {
   likes: number;
 }
 
-export type NavigationListType = Record<string, IMetaData[]>;
-
 export interface IPageProps {
   metaDataMap: Record<string, IMetaData>;
   navigationList: Record<string, IMetaData[]>;
+  footerVersion: string;
+  appName: string;
 }
 
 export type ProcessForPageLayoutType = (
@@ -70,3 +64,8 @@ export type ProcessForPageLayoutType = (
   config: IConfig,
   navigationList: Record<string, string[]>
 ) => IPageProps;
+
+export type CreateFooterValuesTypes = (config: IConfig) => {
+  versionNumber: string;
+  appName: string;
+};

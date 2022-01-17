@@ -5,7 +5,12 @@ import { Footer } from './Footer';
 import { Header } from './Header';
 import { IPageLayoutProps } from './PageLayout';
 
-export const PageLayout: React.FC<IPageLayoutProps> = ({ children, metaData, navigationList }) => {
+export const PageLayout: React.FC<IPageLayoutProps> = ({
+  children,
+  metaData,
+  navigationList,
+  appName,
+}) => {
   return (
     <Container component="main" flex="1" flexDirection="column">
       <Header navigation={navigationList['MainNavigation'] || []} />
@@ -13,7 +18,7 @@ export const PageLayout: React.FC<IPageLayoutProps> = ({ children, metaData, nav
       <Container component="section" flex="1" flexDirection="column">
         <MiContainer maxWidth="xl">{children}</MiContainer>
       </Container>
-      <Footer navigation={navigationList['FooterNavigation'] || []} />
+      <Footer navigation={navigationList['FooterNavigation'] || []} appName={appName} />
     </Container>
   );
 };

@@ -8,11 +8,18 @@ import type { NextPage } from 'next';
 const Shop: NextPage<IPageProps & IStorePage> = ({
   metaDataMap,
   navigationList,
+  footerVersion,
   categories,
   tags,
+  appName,
 }) => {
   return (
-    <PageLayout metaData={metaDataMap['Store']} navigationList={navigationList}>
+    <PageLayout
+      metaData={metaDataMap['Store']}
+      navigationList={navigationList}
+      footerVersion={footerVersion}
+      appName={appName}
+    >
       <StorePartial categories={categories} tags={tags} />
     </PageLayout>
   );

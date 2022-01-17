@@ -5,9 +5,14 @@ import { IPageProps } from '@types';
 import { ProcessForPageLayout } from '@utilities';
 import type { NextPage } from 'next';
 
-const Home: NextPage<IPageProps> = ({ metaDataMap, navigationList }) => {
+const Home: NextPage<IPageProps> = ({ metaDataMap, navigationList, footerVersion, appName }) => {
   return (
-    <PageLayout metaData={metaDataMap['Home']} navigationList={navigationList}>
+    <PageLayout
+      metaData={metaDataMap['Home']}
+      navigationList={navigationList}
+      footerVersion={footerVersion}
+      appName={appName}
+    >
       <HomePage />
     </PageLayout>
   );

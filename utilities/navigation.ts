@@ -1,4 +1,4 @@
-import { ProcessForPageLayoutType } from '@types';
+import { CreateFooterValuesTypes, ProcessForPageLayoutType } from '@types';
 import {
   CreateMetaDataMapType,
   CreateNavigationListType,
@@ -18,9 +18,13 @@ export const ProcessForPageLayout: ProcessForPageLayoutType = (
     config.titleSeparator
   );
   const navigationListResult = createNavigationList(navigationList, metaDataMap);
+  const footerVersion = createFooterValues(config);
+
   return {
     metaDataMap,
     navigationList: navigationListResult,
+    footerVersion: footerVersion.versionNumber,
+    appName: config.appName,
   };
 };
 
@@ -55,4 +59,12 @@ export const createNavigationList: CreateNavigationListType = (navigation, metaD
     });
   });
   return navigationList;
+};
+
+export const createFooterValues: CreateFooterValuesTypes = (config) => {
+  const { version, mode, appName } = config;
+  return {
+    versionNumber: `${version}-${mode}`,
+    appName,
+  };
 };
