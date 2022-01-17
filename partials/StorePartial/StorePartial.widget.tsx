@@ -8,12 +8,14 @@ export const StorePartial: React.FC<IStorePartial> = ({ categories, tags }) => {
         {categories.map((category, key) => {
           return (
             <div key={key}>
-              {category.value}
-              {tags.map((tag, innerKey) => {
-                if (tag.category.name === category.name) {
-                  return <div key={innerKey}>{tag.value}</div>;
-                }
-              })}
+              <div>{category.value}</div>
+              <div>
+                {tags.map((tag, innerKey) => {
+                  if (tag.category.name === category.name) {
+                    return <div key={innerKey}>{tag.value}</div>;
+                  }
+                })}
+              </div>
             </div>
           );
         })}

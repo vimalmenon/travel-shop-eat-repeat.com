@@ -9,6 +9,7 @@ export const PageLayout: React.FC<IPageLayoutProps> = ({
   children,
   metaData,
   navigationList,
+  footerVersion,
   appName,
 }) => {
   return (
@@ -18,7 +19,11 @@ export const PageLayout: React.FC<IPageLayoutProps> = ({
       <Container component="section" flex="1" flexDirection="column">
         <MiContainer maxWidth="xl">{children}</MiContainer>
       </Container>
-      <Footer navigation={navigationList['FooterNavigation'] || []} appName={appName} />
+      <Footer
+        navigation={navigationList['FooterNavigation'] || []}
+        appName={appName}
+        footerVersion={footerVersion}
+      />
     </Container>
   );
 };
