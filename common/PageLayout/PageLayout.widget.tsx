@@ -3,17 +3,17 @@ import MiContainer from '@mui/material/Container';
 
 import { Footer } from './Footer';
 import { Header } from './Header';
-import { IPageLayout } from './PageLayout';
+import { IPageLayoutProps } from './PageLayout';
 
-export const PageLayout: React.FC<IPageLayout> = ({ children, metaData }) => {
+export const PageLayout: React.FC<IPageLayoutProps> = ({ children, metaData, navigationList }) => {
   return (
     <Container component="main" flex="1" flexDirection="column">
-      <Header />
+      <Header navigation={navigationList['MainNavigation'] || []} />
       <MetaData metaData={metaData} />
       <Container component="section" flex="1" flexDirection="column">
         <MiContainer maxWidth="xl">{children}</MiContainer>
       </Container>
-      <Footer />
+      <Footer navigation={navigationList['FooterNavigation'] || []} />
     </Container>
   );
 };

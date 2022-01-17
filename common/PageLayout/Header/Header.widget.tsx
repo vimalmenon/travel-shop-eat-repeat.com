@@ -4,16 +4,11 @@ import Button from '@mui/material/Button';
 import MiContainer from '@mui/material/Container';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
-import { RootState } from '@store';
-import { IMetaData } from '@types';
 import Link from 'next/link';
-import { useSelector } from 'react-redux';
 
-export const Header: React.FC = () => {
-  const data = useSelector<RootState, Record<string, IMetaData[]>>(
-    (state) => state.app.navigationList
-  );
-  const navigation = data['MainNavigation'] || [];
+import { IHeaderProps } from './Header';
+
+export const Header: React.FC<IHeaderProps> = ({ navigation }) => {
   return (
     <AppBar position="static">
       <MiContainer maxWidth="xl">

@@ -23,6 +23,7 @@ module.exports = {
     "^@types$":'<rootDir>/types',
     "^@store$":'<rootDir>/store',
     "^@data$":'<rootDir>/data',
+    "^@utilities$":'<rootDir>/utilities',
     "\\.(css|less)$": "<rootDir>/__mocks__/styleMock.js",
   },
 };

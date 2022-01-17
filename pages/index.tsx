@@ -1,19 +1,13 @@
 import { PageLayout } from '@common';
+import { config, Navigation, NavigationList } from '@data';
 import { HomePage } from '@partials';
-import { RootState, usePageHelper } from '@store';
-import { IMetaData, IPage } from '@types';
+import { IPageProps } from '@types';
+import { ProcessForPageLayout } from '@utilities';
 import type { NextPage } from 'next';
-import { useSelector } from 'react-redux';
 
-import { config, Navigation, NavigationList } from '../data';
-
-const Home: NextPage<IPage> = ({ navigation, config: appConfig, navigationList }) => {
-  usePageHelper(navigation, appConfig, navigationList);
-  const metaDataMap = useSelector<RootState, Record<string, IMetaData>>(
-    (state) => state.app.metaDataMap
-  );
+const Home: NextPage<IPageProps> = ({ metaDataMap, navigationList }) => {
   return (
-    <PageLayout metaData={metaDataMap['Home']}>
+    <PageLayout metaData={metaDataMap['Home']} navigationList={navigationList}>
       <HomePage />
     </PageLayout>
   );
@@ -21,9 +15,7 @@ const Home: NextPage<IPage> = ({ navigation, config: appConfig, navigationList }
 
 Home.getInitialProps = () => {
   return {
-    navigation: Navigation,
-    navigationList: NavigationList,
-    config,
+    ...ProcessForPageLayout(Navigation, config, NavigationList),
   };
 };
 export default Home;

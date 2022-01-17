@@ -1,5 +1,6 @@
 import { IMetaData } from '@types';
 
-export interface IPageLayout {
-  metaData?: IMetaData;
+export interface IPageLayoutProps {
+  metaData: IMetaData;
+  navigationList: Record<string, IMetaData[]>;
 }

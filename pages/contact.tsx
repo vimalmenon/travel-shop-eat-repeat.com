@@ -1,18 +1,13 @@
 import { PageLayout } from '@common';
-import { RootState, usePageHelper } from '@store';
-import { IMetaData, IPage } from '@types';
+import { IPageProps } from '@types';
+import { ProcessForPageLayout } from '@utilities';
 import type { NextPage } from 'next';
-import { useSelector } from 'react-redux';
 
 import { config, Navigation, NavigationList } from '../data';
 
-const Contact: NextPage<IPage> = ({ navigation, config: appConfig, navigationList }) => {
-  usePageHelper(navigation, appConfig, navigationList);
-  const metaDataMap = useSelector<RootState, Record<string, IMetaData>>(
-    (state) => state.app.metaDataMap
-  );
+const Contact: NextPage<IPageProps> = ({ navigationList, metaDataMap }) => {
   return (
-    <PageLayout metaData={metaDataMap['Contact']}>
+    <PageLayout metaData={metaDataMap['Contact']} navigationList={navigationList}>
       <h1>This is Contact</h1>
     </PageLayout>
   );
@@ -20,10 +15,7 @@ const Contact: NextPage<IPage> = ({ navigation, config: appConfig, navigationLis
 
 Contact.getInitialProps = () => {
   return {
-    navigation: Navigation,
-    navigationList: NavigationList,
-
-    config,
+    ...ProcessForPageLayout(Navigation, config, NavigationList),
   };
 };
 

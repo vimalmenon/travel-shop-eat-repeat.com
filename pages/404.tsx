@@ -1,8 +1,7 @@
-import { PageLayout } from '@common';
 import type { NextPage } from 'next';
 
 const PageNotFound: NextPage = () => {
-  return <PageLayout>Page not found</PageLayout>;
+  return <h1>Page not found</h1>;
 };
 
 export default PageNotFound;

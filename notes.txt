@@ -16,3 +16,5 @@ Idea:
 
 
 Store -> [jewelry [Tag]] -> Item
+
+Moving the logic to utilities.

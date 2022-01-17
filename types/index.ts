@@ -57,3 +57,16 @@ export interface IItem {
   images: string[];
   likes: number;
 }
+
+export type NavigationListType = Record<string, IMetaData[]>;
+
+export interface IPageProps {
+  metaDataMap: Record<string, IMetaData>;
+  navigationList: Record<string, IMetaData[]>;
+}
+
+export type ProcessForPageLayoutType = (
+  navigation: INavigationApi[],
+  config: IConfig,
+  navigationList: Record<string, string[]>
+) => IPageProps;
