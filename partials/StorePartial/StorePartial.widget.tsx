@@ -1,25 +1,39 @@
+import { Container } from '@common';
+
+import { SidePanel } from './SidePanel';
 import { IStorePartial } from './StorePartial';
 
 export const StorePartial: React.FC<IStorePartial> = ({ categories, tags }) => {
   return (
-    <div>
-      <h1>This is Shopping page</h1>
-      <div>
-        {categories.map((category, key) => {
-          return (
-            <div key={key}>
-              <div>{category.value}</div>
-              <div>
-                {tags.map((tag, innerKey) => {
-                  if (tag.category.name === category.name) {
-                    return <div key={innerKey}>{tag.value}</div>;
-                  }
-                })}
-              </div>
-            </div>
-          );
-        })}
-      </div>
-    </div>
+    <Container flexDirection="column">
+      <Container>
+        <h1>What is in store for us</h1>
+      </Container>
+      <Container>
+        <SidePanel />
+        <div>
+          {categories.map((category, key) => {
+            return (
+              <Container key={key} flexDirection="column">
+                <Container>
+                  <h2>{category.value}</h2>
+                </Container>
+                <Container>
+                  {tags.map((tag, innerKey) => {
+                    if (tag.category.name === category.name) {
+                      return (
+                        <Container flex="1" key={innerKey}>
+                          {tag.value}
+                        </Container>
+                      );
+                    }
+                  })}
+                </Container>
+              </Container>
+            );
+          })}
+        </div>
+      </Container>
+    </Container>
   );
 };
