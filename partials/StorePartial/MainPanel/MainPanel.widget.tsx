@@ -1,13 +1,11 @@
 import { Container } from '@common';
+import { Item } from '@components';
 import { IItem } from '@types';
 import React from 'react';
 
-// import { useRouter } from 'next/router';
 import { IMainPanel } from './MainPanel';
 
 export const MainPanel: React.FC<IMainPanel> = ({ items: propsItem }) => {
-  //   const router = useRouter();
-  //   console.log(router.query);
   const [items] = React.useState<IItem[]>(propsItem);
   return (
     <Container component="section" flexDirection="column">
@@ -16,13 +14,7 @@ export const MainPanel: React.FC<IMainPanel> = ({ items: propsItem }) => {
       </Container>
       <Container>
         {items.map((item, key) => {
-          return (
-            <div key={key}>
-              <div>{item.name}</div>
-              <div>{item.title}</div>
-              <div>{item.description}</div>
-            </div>
-          );
+          return <Item key={key} item={item} />;
         })}
       </Container>
     </Container>
