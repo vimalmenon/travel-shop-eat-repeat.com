@@ -12,7 +12,7 @@ export const MainPanel: React.FC<IMainPanel> = ({ items: propsItem }) => {
       <Container flex="0 0 auto">
         <h1>What is in store for us</h1>
       </Container>
-      <Container>
+      <Container sx={{ flexWrap: 'wrap' }}>
         {items.map((item, key) => {
           return <Item key={key} item={item} />;
         })}
