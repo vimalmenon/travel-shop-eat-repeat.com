@@ -1,5 +1,5 @@
 import { PageLayout } from '@common';
-import { Categories, config, Navigation, NavigationList, Tags } from '@data';
+import { Categories, config, Items, Navigation, NavigationList, Tags } from '@data';
 import { StorePartial } from '@partials';
 import { IPageProps, IStorePage } from '@types';
 import { ProcessForPageLayout } from '@utilities';
@@ -12,6 +12,7 @@ const Tag: NextPage<IPageProps & IStorePage> = ({
   categories,
   tags,
   appName,
+  items,
 }) => {
   return (
     <PageLayout
@@ -20,7 +21,7 @@ const Tag: NextPage<IPageProps & IStorePage> = ({
       footerVersion={footerVersion}
       appName={appName}
     >
-      <StorePartial categories={categories} tags={tags} />
+      <StorePartial categories={categories} tags={tags} items={items} />
       <div>this is tag</div>
     </PageLayout>
   );
@@ -44,6 +45,7 @@ export async function getStaticProps() {
       ...ProcessForPageLayout(Navigation, config, NavigationList),
       categories: Categories,
       tags: Tags,
+      items: Items,
     },
   };
 }

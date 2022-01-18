@@ -26,4 +26,4 @@ export const ItemTwo: IItem = {
   clicks: 0,
 };
 
-export const items = [ItemOne, ItemTwo];
+export const Items = [ItemOne, ItemTwo];

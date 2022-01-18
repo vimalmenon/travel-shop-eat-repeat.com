@@ -28,6 +28,7 @@ export interface IConfig {
 export interface IStorePage {
   categories: ICategory[];
   tags: ITag[];
+  items: IItem[];
 }
 
 export interface ICategory {
