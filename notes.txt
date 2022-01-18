@@ -17,4 +17,10 @@ Idea:
 
 Store -> [jewelry [Tag]] -> Item
 
+Create Social Media:
+    WhatsApp
+    Facebook page
+
 Moving the logic to utilities.
+    Move the Logic to API's
+Make page sharable

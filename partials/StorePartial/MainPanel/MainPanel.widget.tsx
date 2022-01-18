@@ -1,8 +1,14 @@
 import { Container } from '@common';
+import { IItem } from '@types';
+import React from 'react';
 
+// import { useRouter } from 'next/router';
 import { IMainPanel } from './MainPanel';
 
-export const MainPanel: React.FC<IMainPanel> = ({ items }) => {
+export const MainPanel: React.FC<IMainPanel> = ({ items: propsItem }) => {
+  //   const router = useRouter();
+  //   console.log(router.query);
+  const [items] = React.useState<IItem[]>(propsItem);
   return (
     <Container component="section" flexDirection="column">
       <Container flex="0 0 auto">
