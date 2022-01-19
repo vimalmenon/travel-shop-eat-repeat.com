@@ -19,10 +19,12 @@ export const Container: React.FC<ContainerProps> = ({
   role,
   gap,
   overflow,
+  elevation,
 }) => {
   const theme = useTheme();
   const props = {
     role,
+    elevation,
   };
   const MyContainer = React.useMemo(
     () =>

@@ -1,4 +1,5 @@
 import { Theme } from '@mui';
+import type Paper from '@mui/material/Paper';
 import { SxProps } from '@mui/system';
 
 export type ContentType =
@@ -15,7 +16,7 @@ export type ContentType =
   | 'normal'
   | 'right';
 export interface ContainerProps {
-  component?: 'main' | 'div' | 'section' | 'header' | 'footer' | 'aside';
+  component?: 'main' | 'div' | 'section' | 'header' | 'footer' | 'aside' | Paper;
   flexDirection?: 'column' | 'column-reverse' | 'row' | 'row-reverse';
   justifyContent?: ContentType;
   alignContent?: ContentType;
@@ -28,6 +29,7 @@ export interface ContainerProps {
   role?: string;
   gap?: number[];
   overflow?: string;
+  elevation?: number;
 }
 
 export type GetSpacingValuesType = (
