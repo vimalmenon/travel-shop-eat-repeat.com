@@ -16,6 +16,10 @@ export const Item: React.FC<IItemProps> = ({ item }) => {
       <div>{item.name}</div>
       <div>{item.title}</div>
       <div>{item.description}</div>
+      <div>
+        <span>Price:</span>
+        <span>{item.price}</span>
+      </div>
     </Container>
   );
 };

@@ -1,4 +1,5 @@
 Inspiration page
+https://bazar-react.vercel.app/superstore-shop
 https://material-ui.com/store/previews/webbee-landing-page/
 
 
@@ -24,3 +25,9 @@ Create Social Media:
 Moving the logic to utilities.
     Move the Logic to API's
 Make page sharable
+Need to make subscription model for new items released
+
+Main Page -> New Arrival
+Main Page -> Most Viewed
+
+Use MonoRepo
